@@ -1,0 +1,66 @@
+
+* {
+  box-sizing: border-box;
+}
+
+li, ul {
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.post-area {
+  margin-top: 50px;
+  height: 30vh;
+  z-index: 2;
+}
+
+.calendar {
+  border-collapse: collapse;
+  width: 100%;
+  height: 80px;
+
+}
+.calendar th, .calendar td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 7px;
+}
+.calendar th {
+  background-color: #f2f2f2;
+}
+
+.dates {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nextDates, .preDates {
+  cursor: pointer;
+  color:#a8a8a8;
+}
+
+.dates:hover,
+.nextDates:hover,
+.preDates:hover {
+  background-color: grey;
+  color: white;
+}
+
+.current-day {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+}
+
+
+/* Carousel */
+
+
+.event-container img {
+
+  width: 150px;
+}
