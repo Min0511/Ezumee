@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="create-event.css">
+  <script src="create-event.js" defer></script>
+  <title>Document</title>
+</head>
+<body class="font-sans flex flex-col items-center">
+
+  <nav class="w-full flex items-center justify-between bg-white fixed">
+    <div class="w-44 h-20 order-2"><a href="#"><img src="../home/images/logo.jpg"></a></div>
+
+    <ul class="flex justify-between order-3 mr-5">
+      <button class="hidden">Language</button>
+      <li class="hidden text-xl"><a href="#">sing up</a></li>
+      <li class="text-xs p-2 text-white bg-black rounded-full text-center mb-4"><a href="#">log In</a></li>
+    </ul>
+
+    <div class="flex flex-col w-9 h-9 cursor-pointer order-1 ml-5 mb-2">
+      <div class="bg-black w-full h-1 my-0.5 rounded-2xl"></div>
+      <div class="bg-black w-full h-1 my-0.5 rounded-2xl"></div>
+      <div class="bg-black w-full h-1 my-0.5 rounded-2xl"></div>
+    </div>
+  </nav>
+
+  <form action="#" method="post" id="create-form" class="pt-24 flex flex-col mx-5 gap-5">
+    <div>
+      <label for="event-name">Event name: </label>
+      <input type="text" id="event-name" name="event-name" class="border w-full rounded-2xl h-9">
+    </div>
+    <div>
+      <label for="event-organizer">Organizer: </label>
+      <input type="text" id="event-organizer" name="event-organizer" class="border w-full rounded-2xl h-9">
+    </div>
+    <div>
+      <label for="event-category">Category: </label>
+      <button id="event-category" name="event-category" class="border rounded-md p-2 w-full text-blue-700">Select Category</button>
+    </div>
+    <div>
+      <label for="email">E-mail: </label>
+      <input type="email" id="email" name="email" class="border w-full rounded-2xl h-9">
+    </div>
+    <div>
+      <label for="description">About Event: </label>
+      <textarea id="description" name="description" class="border w-full rounded-2xl h-32 align-top"></textarea>
+    </div>
+    <div>
+    <label for="photo">Add photo: </label>
+    <input type="file" id="photo" name="photo">
+    </div>
+    <button type="submit" class="p-4 bg-black text-white rounded-2xl text-xl">Create</button>
+  </form>
+
+  <dialog id="categories" class="flex flex-col text-xl border rounded-2xl p-0 font-bold hidden">
+    <div class="border w-full h-10 p-1 flex justify-center">
+      <label for="language">Language, ELS</label>
+      <input type="radio" id="language" name="categories" value="language" class="hidden">
+    </div>
+    <div class="border w-full h-10 p-1 flex justify-center">
+      <label for="social-activities">Social Activities</label>
+      <input type="radio" id="social-activities" name="categories" value="social-activities" class="hidden">
+    </div>
+    <div class="border w-full h-10 p-1 flex justify-center">
+      <label for="health-wellbeing">Health & Wellbeing</label>
+      <input type="radio" id="health-wellbeing" name="categories" value="health-wellbeing" class="hidden">
+    </div>
+    <div class="border w-full h-10 p-1 flex justify-center">
+      <label for="technology">Technology</label>
+      <input type="radio" id="technology" name="categories" value="technology" class="hidden">
+    </div>
+    <div class="border w-full h-10 p-1 flex justify-center">
+      <label for="game">Game</label>
+      <input type="radio" id="game" name="categories" value="game" class="hidden">
+    </div>
+    <div class="border w-full h-10 p-1 flex justify-center">
+      <label for="outdoors">Outdoor Activities</label>
+      <input type="radio" id="outdoors" name="categories" value="outdoors" class="hidden">
+    </div>
+    <button id="cancel-button" class="bg-black text-white text-xl w-full h-10">CANCEL</button>
+  </dialog>
+</body>
+</html>
