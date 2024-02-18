@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="calendar.js" defer></script>
   <script src="script.js" defer></script>
 </head>
@@ -29,7 +29,7 @@
 
   </nav>
 
-  <div class="hidden">
+  <!-- <div class="hidden">
     <div>
       <img src="images/poster1.jpg" alt="poster1">
       <p> This is a text 1</p>
@@ -50,15 +50,15 @@
       <img src="images/poster5.jpg" alt="poster5">
       <p> This is a text 5</p>
     </div>
-  </div>
+  </div> -->
 
   <div class="m-5 mt-24">
 
     <div class="flex flex-col gap-5">
-      <div class="flex justify-center gap-3">
-        <button>&lt;</button>
-        <div class="text-3xl current-month"></div>
-        <button>&gt;</button>
+      <div class="flex justify-center gap-3 w-full">
+        <button id="to-left" class="font-bold px-3">&lt;</button>
+        <div class="text-2xl w-48 font-bold text-center year-and-month"></div>
+        <button id="to-right" class="font-bold px-3">&gt;</button>
       </div>
       <table class="calendar" id="calendar">
         
@@ -78,15 +78,14 @@
       </table>
     </div>
 
-    <div class="event-container mt-8 flex overflow-scroll overflow-y-hidden gap-3">
+    <div id="carousel" class="flex mt-10 overflow-scroll gap-5">
 
-      <img src="images/event1.jpg" alt="image1">
-      <img src="images/event2.jpg" alt="image2">
-      <img src="images/event3.jpg" alt="image3">
-      <img src="images/event4.jpg" alt="image4">
-      <img src="images/event5.jpg" alt="image5">
+        <img src="images/event1.jpg" alt="image1" class="event-img img1"  data-index="1">
+        <img src="images/event2.jpg" alt="image2" class="event-img img2"  data-index="2"> 
+        <img src="images/event3.jpg" alt="image3" class="event-img img3"  data-index="3">
+        <img src="images/event4.jpg" alt="image4" class="event-img img4"  data-index="4">
+        <img src="images/event5.jpg" alt="image5" class="event-img img5"  data-index="5">
 
-      <div class="event-controls"></div>
     </div>
 
     <div class="w-full flex flex-col justify-end items-center gap-5 my-10 p-5 border">
